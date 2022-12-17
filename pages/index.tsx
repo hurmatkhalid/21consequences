@@ -1,18 +1,17 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
+import Header from '../components/Header';
 
 const Home: NextPage = () => {
 	return (
-		<div className="flex min-h-screen flex-col items-center justify-center py-2">
+		<div className="min-h-screen bg-black text-white">
 			<Head>
 				<title>21Consequences</title>
-				<link rel="icon" href="/logo.jpg" />
+				<link rel="icon" href="/Logo.png" />
 			</Head>
 
-			<h1 className="text-3xl">
-				Hello, We are going to make the 21C website🚀
-			</h1>
+			<Header />
 		</div>
 	);
 };
