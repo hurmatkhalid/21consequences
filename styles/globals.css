@@ -4,6 +4,10 @@
 
 body {
 	background-color: black;
+	@apply scrollbar-thin scrollbar-thumb-[#3b1e7f] scrollbar-thumb-rounded-xl;
+}
+html {
+	scroll-behavior: smooth;
 }
 
 .transitions {
@@ -12,7 +16,7 @@ body {
 }
 
 .transitions::before {
-	background-color: rgb(249, 249, 249);
+	background-color: #3b1e7f;
 	border-radius: 0px 0px 4px 4px;
 	bottom: -6px;
 	content: '';
