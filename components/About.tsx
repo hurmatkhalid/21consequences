@@ -58,7 +58,7 @@ const About = (props: Props) => {
             ipsum dolor sit, amet consectetur adipisicing elit. Officia
             repudiandae magnam, rem maxime neque error! Officia, ipsa beatae
             molestiae vitae accusamus illo cumque reprehenderit reiciendis harum
-            adipisci sint necessitatibus rem.
+            adipisci sint necessitatibus .
           </p>
         </motion.div>
       </div>
