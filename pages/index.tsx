@@ -16,7 +16,6 @@ const Home: NextPage = () => {
         <title>21Consequences</title>
         <link rel="icon" href="/Logo.png" />
       </Head>
-
       <meta name="description" content={desc} />
 
       <Header />
