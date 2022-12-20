@@ -7,7 +7,7 @@ import Header from '../components/Header';
 
 const Home: NextPage = () => {
 	return (
-		<div className="min-h-screen  w-full bg-black text-white">
+		<div className="h-full overflow-y-scroll scrollbar-none w-full bg-black text-white">
 			<Head>
 				<title>21Consequences</title>
 				<link rel="icon" href="/Logo.png" />
@@ -15,18 +15,10 @@ const Home: NextPage = () => {
 
 			<Header />
 
-			<style global jsx>
-				{`
-					html {
-						scroll-behavior: smooth;
-					}
-				`}
-			</style>
-
-			<main className="max-w-[90rem] mx-auto">
+			<div className="max-w-[90rem] scroll-smooth snap-y h-screen overflow-y-scroll scrollbar-none snap-mandatory mx-auto">
 				<Banner />
 				<About />
-			</main>
+			</div>
 		</div>
 	);
 };
