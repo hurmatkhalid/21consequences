@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import About from '../components/About';
 import Banner from '../components/Banner';
+import Discord from '../components/Discord';
 import Header from '../components/Header';
 
 const Home: NextPage = () => {
@@ -18,6 +19,7 @@ const Home: NextPage = () => {
 			<div className="max-w-[90rem] scroll-smooth snap-y h-screen overflow-y-scroll scrollbar-none snap-mandatory mx-auto">
 				<Banner />
 				<About />
+				<Discord />
 			</div>
 		</div>
 	);
