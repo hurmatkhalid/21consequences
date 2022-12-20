@@ -4,9 +4,9 @@
 
 body {
 	background-color: black;
-	@apply scrollbar-thin scrollbar-thumb-[#3b1e7f] scrollbar-thumb-rounded-xl;
 }
-html {
+
+* {
 	scroll-behavior: smooth;
 }
 
