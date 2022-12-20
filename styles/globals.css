@@ -7,8 +7,14 @@ body {
 	overflow-x: hidden;
 	@apply scrollbar-thin scrollbar-thumb-[#3b1e7f] scrollbar-thumb-rounded-xl;
 }
+
+
 * {
 	scroll-behavior: smooth;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+	display: none;
 }
 
 .transitions {
