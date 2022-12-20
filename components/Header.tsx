@@ -47,7 +47,7 @@ const Header = () => {
           }}
           className="flex"
         >
-          <div className="flex items-center space-x-2 sm:border-r sm:border-gray-600">
+          <div className="flex items-center cursor-pointer space-x-2 sm:border-r sm:border-gray-600">
             <Image src="/Logo.png" height={40} width={40} alt="Logo" />
             <p className="tracking-widest font-semibold pr-5 text-gray-100 uppercase">
               21Consequences
