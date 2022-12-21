@@ -19,6 +19,11 @@ export const schemaTypes = [
         type: 'image',
         title: 'Image',
       },
+      {
+        name: 'DateOfYear',
+        type: 'number',
+        title: 'doy',
+      },
     ],
   },
 ]
