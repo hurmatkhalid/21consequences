@@ -46,8 +46,12 @@ const Header = () => {
             <p className={styleLink} onClick={() => router.push("/")}>
               Home
             </p>
-            <p className={styleLink}>Resources</p>
-            <p className={styleLink}>Library</p>
+            <p className={styleLink} onClick={() => router.push("/resources")}>
+              Resources
+            </p>
+            <p className={styleLink} onClick={() => router.push("/books")}>
+              Books
+            </p>
             <p className={styleLink} onClick={() => router.push("/team")}>
               Team
             </p>

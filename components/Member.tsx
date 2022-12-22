@@ -39,7 +39,7 @@ const Member = ({ name, designation, image, about, linkedIn }: Props) => {
         <h2 className="text-gray-300 text-lg uppercase italic w-full text-center font-bold mt-2 tracking-wider">
           {designation}
         </h2>
-        {/* <p className="w-full text-center text-md mt-2">{about}</p> */}
+        <p className="w-full text-center text-md mt-2">{about}</p>
         <SocialIcon
           target="_blank"
           url={linkedIn}
