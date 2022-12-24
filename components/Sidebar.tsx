@@ -25,7 +25,7 @@ function SideNavbar() {
           <Bars3Icon className="block md:hidden h-6 w-6 z-50" />
         </Disclosure.Button>
         <div className="p-6 sm:w-1/2 md:w-2/3 h-screen md:hidden bg-black z-50 fixed top-0 -left-96 lg:left-0 lg:w-60  peer-focus:left-0 peer:transition ease-out delay-150 duration-200">
-          <div className="flex flex-col justify-start item-center">
+          <div className="flex flex-col relative h-full justify-start item-center">
             <div className="flex items-center cursor-pointer space-x-2">
               <Image src="/Logo.png" height={40} width={40} alt="Logo" />
               <p className="tracking-widest font-semibold pr-5 text-gray-100 uppercase">
@@ -62,7 +62,7 @@ function SideNavbar() {
               </div>
             </div>
 
-            <div className="mt-8 flex items-center justify-center">
+            <div className="mt-8 flex items-center absolute bottom-5 justify-center">
               <SocialIcon
                 url="https://instagram.com/21consequences/"
                 target="_blank" //so that the link opens in new tab
