@@ -8,9 +8,9 @@ const About = (props: Props) => {
   return (
     <div
       id="about"
-      className="h-screen w-full snap-end flex justify-center items-center"
+      className="md:h-screen min-h-fit w-full snap-end flex justify-center items-center"
     >
-      <div className="flex flex-col md:flex-row justify-center w-full items-center px-4 md:px-20">
+      <div className="flex flex-col md:flex-row justify-center pt-10 md:pt-0 w-full items-center px-8 md:px-20">
         {/* Image */}
         <motion.div
           initial={{
@@ -48,9 +48,9 @@ const About = (props: Props) => {
             duration: 1.5,
           }}
           viewport={{ once: true }}
-          className="flex flex-col w-1/2 items-start justify-start space-y-4"
+          className="flex flex-col md:w-1/2 text-center md:text-left w-full items-start justify-start space-y-4"
         >
-          <h1 className="font-bold text-4xl uppercase tracking-widest text-gray-300">
+          <h1 className="font-bold text-4xl uppercase w-full md:text-left text-center tracking-widest text-gray-300">
             About
           </h1>
           <p className="text-base leading-5 tracking-wider text-gray-400">

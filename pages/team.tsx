@@ -4,6 +4,7 @@ import Member from "../components/Member";
 import imageUrlBuilder from "@sanity/image-url";
 import Head from "next/head";
 import { client } from "../lib/sanity";
+import SideNavbar from "../components/Sidebar";
 
 type Props = {};
 
@@ -41,6 +42,7 @@ const Team = ({ team }: any) => {
           </div>
         </div>
       </div>
+      <SideNavbar />
     </div>
   );
 };

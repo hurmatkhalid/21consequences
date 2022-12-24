@@ -8,9 +8,9 @@ const Discord = (props: Props) => {
   return (
     <div
       id="discord"
-      className="h-screen w-full snap-start flex justify-center items-center"
+      className="md:h-screen min-h-fit w-full snap-start flex justify-center items-center"
     >
-      <div className="flex flex-col md:flex-row justify-between w-full items-center px-4 md:px-20">
+      <div className="flex flex-col md:flex-row justify-between pt-20 md:pt-0 w-full items-center px-8 md:px-20">
         <motion.div
           initial={{
             y: 200,
@@ -24,7 +24,7 @@ const Discord = (props: Props) => {
             duration: 1,
           }}
           viewport={{ once: true }}
-          className="flex flex-col w-1/2 items-start justify-start space-y-4"
+          className="flex flex-col md:w-1/2 w-full text-center md:text-left mt-5 md:mt-0 items-start justify-start space-y-4"
         >
           <h1 className="font-bold text-4xl uppercase tracking-widest text-gray-300">
             Join Our Student Community on Discord
@@ -57,6 +57,7 @@ const Discord = (props: Props) => {
             duration: 1.5,
           }}
           viewport={{ once: true }}
+          className="order-first md:order-last"
         >
           <Image
             src="/ss.png"

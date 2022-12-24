@@ -2,6 +2,7 @@ import React from "react";
 import Header from "../components/Header";
 import ComingSoon from "../components/ComingSoon";
 import Head from "next/head";
+import SideNavbar from "../components/Sidebar";
 
 type Props = {};
 
@@ -17,6 +18,7 @@ const Books = (props: Props) => {
       <div className="max-w-7xl h-screen overflow-y-scroll scrollbar-thin scrollbar-track-transparent scrollbar-thumb-transparent snap-y snap-mandatory mx-auto">
         <ComingSoon />
       </div>
+      <SideNavbar />
     </div>
   );
 };

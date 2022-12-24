@@ -6,10 +6,10 @@ const Banner = () => {
   return (
     <div
       id="banner"
-      className="h-screen w-full flex justify-center snap-end items-center"
+      className="md:h-screen min-h-fit w-full flex justify-center snap-end items-center"
     >
-      <div className="flex flex-col md:flex-row justify-center w-full items-center px-4 md:px-20">
-        <div className="flex flex-col w-1/2 items-start space-y-4">
+      <div className="flex flex-col md:flex-row text-center md:text-left justify-between w-full md:mt-0 mt-20 items-center px-8 md:px-20">
+        <div className="flex flex-col md:w-1/2 items-start space-y-4">
           <motion.h1
             initial={{
               y: -200,
@@ -60,7 +60,7 @@ const Banner = () => {
             transition={{
               duration: 1.5,
             }}
-            className="flex items-center space-x-4"
+            className="flex items-center w-full justify-center md:justify-start space-x-4"
           >
             <Link
               href="#about"
@@ -85,14 +85,15 @@ const Banner = () => {
           transition={{
             duration: 1,
           }}
-          className=""
+          className="max-w-fit order-first md:order-last"
         >
           <Image
             loading="eager"
             src="/boy.svg"
             alt="svg"
-            height={600}
-            width={600}
+            height={500}
+            width={500}
+            className="object-cover"
           />
         </motion.div>
       </div>
