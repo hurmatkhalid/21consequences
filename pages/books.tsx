@@ -8,7 +8,7 @@ type Props = {};
 
 const Books = (props: Props) => {
   return (
-    <div className="min-h-screen w-full bg-black text-white">
+    <div className="min-h-screen w-full relative bg-black text-white">
       <Head>
         <title>21Consequences - Books</title>
         <link rel="icon" href="/Logo.png" />

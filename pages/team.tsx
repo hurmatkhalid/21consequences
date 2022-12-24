@@ -15,7 +15,7 @@ const Team = ({ team }: any) => {
     return builder.image(source);
   };
   return (
-    <div className="min-h-screen w-full bg-black text-white">
+    <div className="min-h-screen w-full bg-black relative text-white">
       <Head>
         <title>21Consequences - Team</title>
         <link rel="icon" href="/Logo.png" />

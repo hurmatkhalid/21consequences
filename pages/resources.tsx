@@ -8,7 +8,7 @@ type Props = {};
 
 const Resources = (props: Props) => {
   return (
-    <div className="min-h-screen w-full bg-black text-white">
+    <div className="min-h-screen w-full bg-black relative text-white">
       <Head>
         <title>21Consequences - Resources</title>
         <link rel="icon" href="/Logo.png" />
