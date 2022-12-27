@@ -1,15 +1,11 @@
-import React from "react";
+"use client";
+
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-type Props = {};
-
-const About = (props: Props) => {
+const About = () => {
   return (
-    <div
-      id="about"
-      className="md:h-screen min-h-fit w-full snap-end flex justify-center items-center"
-    >
+    <div className="md:h-screen min-h-fit w-full snap-end flex justify-center items-center">
       <div className="flex flex-col md:flex-row justify-center pt-10 md:pt-0 w-full items-center px-8 md:px-20">
         {/* Image */}
         <motion.div

@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+"use client";
+
 import { Disclosure } from "@headlessui/react";
 import {
   ArrowDownOnSquareIcon,
@@ -8,14 +9,10 @@ import {
   UserGroupIcon,
 } from "@heroicons/react/24/solid";
 import Image from "next/image";
-import { useRouter } from "next/router";
 import { SocialIcon } from "react-social-icons";
 import Link from "next/link";
 
 function SideNavbar() {
-  const router = useRouter();
-  const [hoveredIcon, setHoveredIcon] = useState("");
-
   const styleLink =
     "text-gray-500 font-semibold tracking-widest cursor-pointer uppercase";
   return (
@@ -33,66 +30,59 @@ function SideNavbar() {
               </p>
             </div>
             <div className="flex flex-col items-start pl-5 mt-10 space-y-4">
-              <div className="flex justify-start items-center transition-all duration-800 ease-in gap-4 pl-5  hover:bg-gray-200 p-2 rounded-md group cursor-pointer hover:shadow-lg">
+              <Link
+                href="/"
+                className="flex justify-start items-center transition-all duration-800 ease-in gap-4 pl-5  hover:bg-gray-200 p-2 rounded-md group cursor-pointer hover:shadow-lg"
+              >
                 <HomeIcon className="h-8 group-hover:text-black" />
-                <p className={styleLink} onClick={() => router.push("/")}>
-                  Home
-                </p>
-              </div>
-              <div className="flex justify-start items-center gap-4 pl-5  hover:bg-gray-200 p-2 rounded-md group cursor-pointer hover:shadow-lg">
+                <p className={styleLink}>Home</p>
+              </Link>
+              <Link
+                href="/resources"
+                className="flex justify-start items-center gap-4 pl-5  hover:bg-gray-200 p-2 rounded-md group cursor-pointer hover:shadow-lg"
+              >
                 <ArrowDownOnSquareIcon className="h-8 group-hover:text-black" />
-                <p
-                  className={styleLink}
-                  onClick={() => router.push("/resources")}
-                >
-                  Resources
-                </p>
-              </div>
-              <div className="flex justify-start items-center gap-4 pl-5  hover:bg-gray-200 p-2 rounded-md group cursor-pointer hover:shadow-lg">
+                <p className={styleLink}>Resources</p>
+              </Link>
+              <Link
+                href="/books"
+                className="flex justify-start items-center gap-4 pl-5  hover:bg-gray-200 p-2 rounded-md group cursor-pointer hover:shadow-lg"
+              >
                 <BookOpenIcon className="h-8 group-hover:text-black" />
-                <p className={styleLink} onClick={() => router.push("/books")}>
-                  Books
-                </p>
-              </div>
-              <div className="flex justify-start items-center gap-4 pl-5  hover:bg-gray-200 p-2 rounded-md group cursor-pointer hover:shadow-lg">
+                <p className={styleLink}>Books</p>
+              </Link>
+              <Link
+                href="/team"
+                className="flex justify-start items-center gap-4 pl-5  hover:bg-gray-200 p-2 rounded-md group cursor-pointer hover:shadow-lg"
+              >
                 <UserGroupIcon className="h-8 group-hover:text-black" />
-                <p className={styleLink} onClick={() => router.push("/team")}>
-                  Team
-                </p>
-              </div>
+                <p className={styleLink}>Team</p>
+              </Link>
             </div>
 
             <div className="mt-8 flex items-center absolute bottom-5 justify-center">
               <SocialIcon
                 url="https://instagram.com/21consequences/"
                 target="_blank" //so that the link opens in new tab
-                onMouseEnter={() => setHoveredIcon("instagram")} //onmouseenter is an inbuilt function for anything when mouse goes on a position
-                onMouseLeave={() => setHoveredIcon("")} // this needs to be done or else the icon would stay purple
-                fgColor={hoveredIcon == "instagram" ? "#3b1e7f" : "gray"}
+                fgColor={"gray"}
                 bgColor="transparent"
               />
               <SocialIcon
                 url="https://twitter.com/21consequences/"
                 target="_blank"
-                onMouseEnter={() => setHoveredIcon("twitter")}
-                onMouseLeave={() => setHoveredIcon("")}
-                fgColor={hoveredIcon == "twitter" ? "#3b1e7f" : "gray"}
+                fgColor={"gray"}
                 bgColor="transparent"
               />
               <SocialIcon
                 url="https://www.linkedin.com/company/21consequences/"
                 target="_blank"
-                onMouseEnter={() => setHoveredIcon("linkedin")}
-                onMouseLeave={() => setHoveredIcon("")}
-                fgColor={hoveredIcon == "linkedin" ? "#3b1e7f" : "gray"}
+                fgColor={"gray"}
                 bgColor="transparent"
               />
               <SocialIcon
                 url="https://discord.gg/FSm4QqcAKd/"
                 target="_blank"
-                onMouseEnter={() => setHoveredIcon("discord")}
-                onMouseLeave={() => setHoveredIcon("")}
-                fgColor={hoveredIcon == "discord" ? "#3b1e7f" : "gray"}
+                fgColor={"gray"}
                 bgColor="black"
               />
             </div>

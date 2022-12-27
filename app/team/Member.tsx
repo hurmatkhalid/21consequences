@@ -11,7 +11,6 @@ type Props = {
 };
 
 const Member = ({ name, designation, image, about, linkedIn }: Props) => {
-  console.log(linkedIn);
   return (
     <div className="relative h-[600px] w-[300px] mb-20 rounded-xl group hover:scale-110 px-20 transition-all duration-500 ease-in-out">
       <div

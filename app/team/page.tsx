@@ -1,19 +1,41 @@
 import React from "react";
-import Header from "../components/Header";
-import Member from "../components/Member";
+import Header from "../Header";
 import imageUrlBuilder from "@sanity/image-url";
 import Head from "next/head";
-import { client } from "../lib/sanity";
-import SideNavbar from "../components/Sidebar";
+import { client } from "../../lib/sanity";
+import SideNavbar from "../Sidebar";
+import Member from "./Member";
 
-type Props = {};
+type Member = {
+  name: string;
+  designation: string;
+  image: any;
+  linkedIn: string;
+  about: string;
+};
 
 const builder = imageUrlBuilder(client);
 
-const Team = ({ team }: any) => {
+const getTeam = async () => {
+  const query = `
+      *[_type == "team"] | order(DateOfYear asc){
+        name,
+        designation,
+        image,
+		    linkedIn,
+        about
+      }
+    `;
+  const sanityResponse: Member[] = await client.fetch(query);
+  return sanityResponse;
+};
+
+const Team = async () => {
   const urlFor = (source: any) => {
     return builder.image(source);
   };
+
+  const team = await getTeam();
   return (
     <div className="min-h-screen w-full bg-black relative text-white">
       <Head>
@@ -29,7 +51,7 @@ const Team = ({ team }: any) => {
             Core
           </h1>
           <div className="grid grid-cols-1 w-full px-20 sm:grid-cols-2 place-items-center gap-5 gap-y-10 md:grid-cols-3">
-            {team.map((member: any, i: number) => (
+            {team.map((member: Member, i: number) => (
               <Member
                 key={i}
                 linkedIn={member.linkedIn}
@@ -48,22 +70,3 @@ const Team = ({ team }: any) => {
 };
 
 export default Team;
-
-export async function getServerSideProps(context: any) {
-  const query = `
-      *[_type == "team"] | order(DateOfYear asc){
-        name,
-        designation,
-        image,
-		linkedIn,
-        about
-      }
-    `;
-  const sanityResponse = await client.fetch(query);
-
-  return {
-    props: {
-      team: sanityResponse,
-    },
-  };
-}

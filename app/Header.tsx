@@ -1,14 +1,13 @@
 //FOR HEADER RELATED WORK
+"use client";
 import Image from "next/image";
 import { SocialIcon } from "react-social-icons";
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
-import { useRouter } from "next/router";
-import { Bars3Icon } from "@heroicons/react/24/solid";
+import { useState } from "react";
+import Link from "next/link";
 
 //for including images in nextjs we need this
 const Header = () => {
-  const router = useRouter();
   const [hoveredIcon, setHoveredIcon] = useState("");
 
   const styleLink =
@@ -44,18 +43,18 @@ const Header = () => {
             </p>
           </div>
           <div className="md:flex items-center pl-7 hidden space-x-4 md:space-x-10 lg:space-x-12">
-            <p className={styleLink} onClick={() => router.push("/")}>
+            <Link href="/" className={styleLink}>
               Home
-            </p>
-            <p className={styleLink} onClick={() => router.push("/resources")}>
+            </Link>
+            <Link href="/resources" className={styleLink}>
               Resources
-            </p>
-            <p className={styleLink} onClick={() => router.push("/books")}>
+            </Link>
+            <Link href="/books" className={styleLink}>
               Books
-            </p>
-            <p className={styleLink} onClick={() => router.push("/team")}>
+            </Link>
+            <Link href="/team" className={styleLink}>
               Team
-            </p>
+            </Link>
           </div>
         </motion.div>
         <motion.div
